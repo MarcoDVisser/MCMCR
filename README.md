@@ -6,9 +6,8 @@ Markov Chain Monte Carlo algorithms and rejection sampling in R. MCMCR provides 
 ## Installation
 
 Currently there isn't a release on [CRAN](http://cran.r-project.org/),
-though one day, when I am statisfied with the optimizations. You can still  
-download the [zip](https://github.com/MarcoDVisser/choosecolor/zipball/master) 
-or [tar ball](https://github.com/MarcoDVisser/choosecolor/tarball/master).
+though one day, when I am statisfied with the optimizations, there may be.
+You can still  download the [zip](https://github.com/MarcoDVisser/choosecolor/zipball/master) or [tar ball](https://github.com/MarcoDVisser/choosecolor/tarball/master).
 Then decompress and run `R CMD INSTALL` on it, 
 or use the **devtools** package to install the development version.
 
