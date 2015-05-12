@@ -1,0 +1,13 @@
+Package: MCMCR
+Type: Package
+Title: Markov-chain monte-carlo methods and rejection sampling in R
+Version: 0.1
+Date: 2015-05-17
+Author: Marco D. Visser
+Maintainer: Marco D. Visser <marco.d.visser@gmail.com>
+Description: A set of MCMC algorithms intended for general use.
+	     The set will be gradually optimized for speed and
+	     efficiency. 
+License: GPL-2
+URL: http://github.com/MarcoDVisser/MCMCR
+BugReports: http://github.com/MarcoDVisser/MCMCR/issues

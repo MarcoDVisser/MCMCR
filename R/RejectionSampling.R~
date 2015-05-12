@@ -1,0 +1,41 @@
+rs <- function(dat,start,LL,priors,N,giveup <- 100){
+
+  accept.hist <- array(dim=c(N,length(start)))
+  
+  ## create progress bar
+  pb <- txtProgressBar(min = 0, max = N, style = 3)
+  accepts <- start
+  
+  for (j in 1:N){
+    
+  proposals <- priors(start)
+  proposal <- accepts
+
+  ## Acceptance prob on log scale
+  for(i in 1:length(proposals)){
+    proposal[i] <- proposals[i]
+  r <- (sum(LL(proposal,dat)-
+            LL(accepts,dat)))
+
+  if (log(runif(1))<r) {
+    accepts[i] <- proposal[i]
+    A <- j
+  }
+  }
+  
+  accept.hist[j,] <- accepts
+
+  if(giveup < A - j){
+  message("Acceptance dropped to giveup value")  
+  close(pb)
+  return(accept.hist)
+  }
+
+  setTxtProgressBar(pb, j)
+
+}
+  
+  close(pb)
+  return(accept.hist)
+}
+ 
